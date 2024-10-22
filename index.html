@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jerry Lundahl - Portfolio</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jerry Lundahl Portfolio" />
+    <meta name="author" content="Jerry Lundahl" />
+    <meta
+      name="keywords"
+      content="jerry, lundahl, portfolio, web, development, full, Stack, full-stack, orakel"
+    />
+
+    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+    <link rel="stylesheet" href="style_home.css" />
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <span class="menu-toggle">☰</span>
+      <a href="#"><img src="Images/logo.png" alt="Logo" class="logo" /></a>
+      <nav>
+        <a href="#about">About me</a>
+        <a href="#projects">My projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Jerry Lundahl</h1>
+        <p>
+          Full-stack student || Teknikhögskolan Lund <br /><br />
+          I love developing dynamic, user-friendly web pages that deliver
+          seamless experiences.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary"
+            >Download CV<img
+              src="Images/downloadArrow.gif"
+              alt="arrow.gif"
+              style="
+                width: 30px;
+                height: 30px;
+                border-radius: 20%;
+                margin-left: 10px;
+              "
+          /></a>
+          <a href="#" class="btn btn-secondary">Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="Images/profile_picture.png" alt="Jerry Lundahl" />
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="Images/about_img.png" alt="About Me" />
+        </div>
+        <div class="about-text">
+          <h1>About me</h1>
+          <p>
+            I'm a full-stack student with a background in game development and
+            software engineering. I thrive on challenges and am eager to expand
+            my expertise in web development. <br /><br />Fluent in Swedish and
+            English, I also converse in Japanese and Thai. <br />In my spare
+            time, I enjoy weight training, playing video games, and traveling.
+          </p>
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h2>My <span class="applyCyanColor">Skills</span></h2>
+      <div class="skills-container">
+        <div class="skill" percentage="90">
+          <h3>HTML</h3>
+          <div class="skill-content">
+            <img
+              src="Images/html_icon.png"
+              alt="HTML icon"
+              class="skill-icon"
+            />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill" percentage="70">
+          <h3>CSS</h3>
+          <div class="skill-content">
+            <img src="Images/css_icon.png" alt="CSS icon" class="skill-icon" />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill" percentage="50">
+          <h3>Javascript</h3>
+          <div class="skill-content">
+            <img
+              src="Images/javascript_icon.png"
+              alt="Javascript icon"
+              class="skill-icon"
+            />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill" percentage="80">
+          <h3>Figma</h3>
+          <div class="skill-content">
+            <img
+              src="Images/figma_icon.png"
+              alt="Figma icon"
+              class="skill-icon"
+            />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill" percentage="50">
+          <h3>C ++</h3>
+          <div class="skill-content">
+            <img src="Images/c++_icon.png" alt="C++ icon" class="skill-icon" />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill" percentage="20">
+          <h3>SQL</h3>
+          <div class="skill-content">
+            <img src="Images/SQL_icon.png" alt="SQL icon" class="skill-icon" />
+            <div class="skill-bar-container">
+              <div class="skill-bar">
+                <div class="skill-progress"></div>
+              </div>
+              <span class="skill-percentage"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects" data-tooltip="See it for yourself here!">
+      <h2>My <span class="applyCyanColor">Projects</span></h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-content">
+            <a href="/compound" class="projectHeader" target="_blank"
+              >Project 1</a
+            >
+            <p>
+              This was a project to make a compound interest calculator, with
+              the addition of being able to have several accounts with different
+              interest rates. <br />This being since you rarely put all your
+              savings in one place. <br /><br />It was made with HTML, CSS and
+              Javascript.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Images/compound calc.png" alt="Project 1" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="Images/Project_picture.jpg" alt="Project 2" />
+          </div>
+          <div class="project-content">
+            <a href="" class="projectHeader">Project 2 - Coming soon!</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-content">
+            <a href="" class="projectHeader">Project 3 - Coming soon!</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Images/Project_picture.jpg" alt="Project 3" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="Images/Project_picture.jpg" alt="Project 4" />
+          </div>
+          <div class="project-content">
+            <a href="" class="projectHeader">Project 4 - Coming soon!</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>C O N T A C T &nbsp &nbsp M E</h2>
+          <div class="contact-icons">
+            <a
+              href="https://se.linkedin.com/in/jerry-lundahl-b15299330"
+              target="_blank"
+              ><img src="Images/linkedIn_icon.png" alt="LinkedIn"
+            /></a>
+            <a
+              href="https://discord.com/users/224477222407241728"
+              target="_blank"
+              ><img src="Images/discord_icon.png" alt="Discord"
+            /></a>
+          </div>
+        </div>
+        <form class="contact-form">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="profilePage.js"></script>
+  </body>
+</html>
