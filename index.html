@@ -24,15 +24,18 @@
   <body>
     <div class="navbar">
       <span class="menu-toggle">☰</span>
-      <a href="#"><img src="Images/logo.png" alt="Logo" class="logo" /></a>
+      <a href="#home"><img src="Images/logo.png" alt="Logo" class="logo" /></a>
       <nav>
         <a href="#about">About me</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">My projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
     </div>
 
-    <div class="hero">
+    <div class="hero" id="home">
       <div class="hero-content">
         <h1>Jerry Lundahl</h1>
         <p>
@@ -41,8 +44,8 @@
           seamless experiences.
         </p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-primary"
-            >Download CV<img
+          <a href="#projects" class="btn btn-primary"
+            >View My Work<img
               src="Images/downloadArrow.gif"
               alt="arrow.gif"
               style="
@@ -52,7 +55,7 @@
                 margin-left: 10px;
               "
           /></a>
-          <a href="#" class="btn btn-secondary">Portfolio</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
         </div>
       </div>
       <div class="hero-image">
@@ -60,11 +63,8 @@
       </div>
     </div>
 
-    <div class="about">
+    <div class="about" data-scroll-animate>
       <div class="about-content">
-        <div class="about-image">
-          <img src="Images/about_img.png" alt="About Me" />
-        </div>
         <div class="about-text">
           <h1>About me</h1>
           <p>
@@ -79,100 +79,116 @@
       </div>
     </div>
 
-    <div class="skills">
-      <h2>My <span class="applyCyanColor">Skills</span></h2>
-      <div class="skills-container">
-        <div class="skill" percentage="90">
-          <h3>HTML</h3>
-          <div class="skill-content">
-            <img
-              src="Images/html_icon.png"
-              alt="HTML icon"
-              class="skill-icon"
-            />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
+    <div class="experience" id="experience" data-scroll-animate>
+      <h2>Experience <span class="applyCyanColor">Timeline</span></h2>
+      <div class="timeline">
+        <div class="timeline-item" data-timeline-animate>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Data Analyst</h3>
+            <p class="company">University of West London</p>
+            <p class="date">March 2024 - June 2024</p>
+            <p class="description">Leading data analysis initiatives, developing insights from complex datasets, and creating visualization dashboards for academic research projects.</p>
+            <div class="skills-tag">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Power BI</span>
+              <span>Statistical Analysis</span>
             </div>
           </div>
         </div>
-        <div class="skill" percentage="70">
-          <h3>CSS</h3>
-          <div class="skill-content">
-            <img src="Images/css_icon.png" alt="CSS icon" class="skill-icon" />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
+
+        <div class="timeline-item" data-timeline-animate>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Data Analyst Intern</h3>
+            <p class="company">Protrainy</p>
+            <p class="date">September 2021 - January 2022</p>
+            <p class="description">Collaborated on machine learning projects, performed data preprocessing and feature engineering, supporting data science initiatives.</p>
+            <div class="skills-tag">
+              <span>Machine Learning</span>
+              <span>Data Processing</span>
+              <span>Python</span>
             </div>
           </div>
         </div>
-        <div class="skill" percentage="50">
-          <h3>Javascript</h3>
-          <div class="skill-content">
-            <img
-              src="Images/javascript_icon.png"
-              alt="Javascript icon"
-              class="skill-icon"
-            />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
-            </div>
-          </div>
-        </div>
-        <div class="skill" percentage="80">
-          <h3>Figma</h3>
-          <div class="skill-content">
-            <img
-              src="Images/figma_icon.png"
-              alt="Figma icon"
-              class="skill-icon"
-            />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
-            </div>
-          </div>
-        </div>
-        <div class="skill" percentage="50">
-          <h3>C ++</h3>
-          <div class="skill-content">
-            <img src="Images/c++_icon.png" alt="C++ icon" class="skill-icon" />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
-            </div>
-          </div>
-        </div>
-        <div class="skill" percentage="20">
-          <h3>SQL</h3>
-          <div class="skill-content">
-            <img src="Images/SQL_icon.png" alt="SQL icon" class="skill-icon" />
-            <div class="skill-bar-container">
-              <div class="skill-bar">
-                <div class="skill-progress"></div>
-              </div>
-              <span class="skill-percentage"></span>
+
+        <div class="timeline-item" data-timeline-animate>
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Full-Stack Development Student</h3>
+            <p class="company">Teknikhögskolan Lund</p>
+            <p class="date">2022 - Present</p>
+            <p class="description">Pursuing comprehensive full-stack web development education, mastering modern frameworks, responsive design, and backend technologies.</p>
+            <div class="skills-tag">
+              <span>Web Development</span>
+              <span>Full-Stack</span>
+              <span>JavaScript</span>
+              <span>Database Design</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="projects" data-tooltip="See it for yourself here!">
+    <div class="skills" id="skills" data-scroll-animate>
+      <h2>My <span class="applyCyanColor">Skills</span></h2>
+      <div class="skills-container">
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img
+              src="Images/html_icon.png"
+              alt="HTML icon"
+              class="skill-icon"
+            />
+            <h3>HTML</h3>
+          </div>
+        </div>
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img src="Images/css_icon.png" alt="CSS icon" class="skill-icon" />
+            <h3>CSS</h3>
+          </div>
+        </div>
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img
+              src="Images/javascript_icon.png"
+              alt="Javascript icon"
+              class="skill-icon"
+            />
+            <h3>JavaScript</h3>
+          </div>
+        </div>
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img
+              src="Images/figma_icon.png"
+              alt="Figma icon"
+              class="skill-icon"
+            />
+            <h3>Figma</h3>
+          </div>
+        </div>
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img src="Images/c++_icon.png" alt="C++ icon" class="skill-icon" />
+            <h3>C++</h3>
+          </div>
+        </div>
+        <div class="skill" data-skill-animate>
+          <div class="skill-content">
+            <img src="Images/SQL_icon.png" alt="SQL icon" class="skill-icon" />
+            <h3>SQL</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects" id="projects" data-tooltip="See it for yourself here!" data-scroll-animate>
       <h2>My <span class="applyCyanColor">Projects</span></h2>
       <div class="projects-container">
-        <div class="project">
+        <div class="project" data-project-animate>
           <div class="project-content">
             <a href="/compound" class="projectHeader" target="_blank"
               >Project 1</a
@@ -189,7 +205,7 @@
             <img src="Images/compound calc.png" alt="Project 1" />
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-project-animate>
           <div class="project-image">
             <img src="Images/Project_picture.jpg" alt="Project 2" />
           </div>
@@ -204,7 +220,7 @@
             </p>
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-project-animate>
           <div class="project-content">
             <a href="" class="projectHeader">Project 3 - Coming soon!</a>
             <p>
@@ -219,7 +235,7 @@
             <img src="Images/Project_picture.jpg" alt="Project 3" />
           </div>
         </div>
-        <div class="project">
+        <div class="project" data-project-animate>
           <div class="project-image">
             <img src="Images/Project_picture.jpg" alt="Project 4" />
           </div>
@@ -237,22 +253,10 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact" data-scroll-animate>
       <div class="contact-container">
         <div class="contact-header">
-          <h2>C O N T A C T &nbsp &nbsp M E</h2>
-          <div class="contact-icons">
-            <a
-              href="https://se.linkedin.com/in/jerry-lundahl-b15299330"
-              target="_blank"
-              ><img src="Images/linkedIn_icon.png" alt="LinkedIn"
-            /></a>
-            <a
-              href="https://discord.com/users/224477222407241728"
-              target="_blank"
-              ><img src="Images/discord_icon.png" alt="Discord"
-            /></a>
-          </div>
+          <h2>G E T &nbsp &nbsp I N &nbsp &nbsp T O U C H</h2>
         </div>
         <form class="contact-form">
           <input
@@ -279,6 +283,23 @@
         </form>
       </div>
     </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Jerry Lundahl. All rights reserved.</p>
+      <p>Crafted with passion for web development</p>
+      <div class="contact-icons">
+        <a
+          href="https://se.linkedin.com/in/jerry-lundahl-b15299330"
+          target="_blank"
+          ><img src="Images/linkedIn_icon.png" alt="LinkedIn"
+        /></a>
+        <a
+          href="https://discord.com/users/224477222407241728"
+          target="_blank"
+          ><img src="Images/discord_icon.png" alt="Discord"
+        /></a>
+      </div>
+    </footer>
 
     <script src="profilePage.js"></script>
   </body>
