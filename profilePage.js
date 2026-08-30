@@ -81,6 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.querySelector(".navbar nav");
   const navbar = document.querySelector(".navbar");
   const logo = document.querySelector(".logo");
+  const aboutSection = document.getElementById("about");
+
+  function toggleNavbarVisibility() {
+    if (navbar && aboutSection) {
+      navbar.classList.toggle("navbar-hidden", window.scrollY < aboutSection.offsetTop);
+    }
+  }
+
+  window.addEventListener("scroll", toggleNavbarVisibility, { passive: true });
+  window.addEventListener("resize", toggleNavbarVisibility);
+  toggleNavbarVisibility();
 
   if (menuToggle) {
     menuToggle.addEventListener("click", function () {
@@ -100,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
       link.addEventListener("click", function () {
         navMenu.classList.remove("show");
         navbar.classList.remove("nav-visible");
-        logo.style.display = "none";
       });
     });
   }
