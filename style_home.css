@@ -600,6 +600,85 @@ h2 {
   transform: scale(1.05);
 }
 
+/* Education & Certifications Section */
+.education {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  padding: 80px 20px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.education::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.education h2 {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.education-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: left;
+}
+
+.education-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  transform: translateY(-5px);
+}
+
+.education-card h3 {
+  margin: 0 0 8px 0;
+  color: var(--accent-color);
+  font-size: 1.2em;
+}
+
+.education-card .company {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 5px 0;
+}
+
+.education-card .date {
+  font-size: 0.85em;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin: 5px 0 12px 0;
+}
+
+.education-card .description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
 /* Skills Section */
 .skills {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
@@ -628,78 +707,79 @@ h2 {
   margin-bottom: 50px;
 }
 
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+.skills-category {
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
   position: relative;
   z-index: 1;
-  padding-bottom: 40px;
+  text-align: left;
 }
 
-.skill {
-  flex-basis: calc(33.333% - 20px);
-  min-width: 180px;
-  padding: 30px;
+.skills-category:last-child {
+  margin-bottom: 0;
+}
+
+.skills-category h3 {
+  color: var(--accent-color);
+  font-size: 1.15em;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 15px;
   background: var(--card-bg);
   border-radius: 15px;
   border: 1px solid var(--border-light);
   backdrop-filter: blur(10px);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: center;
 }
 
-.skill:nth-child(1) { animation-delay: 0s; }
-.skill:nth-child(2) { animation-delay: 0.1s; }
-.skill:nth-child(3) { animation-delay: 0.2s; }
-.skill:nth-child(4) { animation-delay: 0.3s; }
-.skill:nth-child(5) { animation-delay: 0.4s; }
-.skill:nth-child(6) { animation-delay: 0.5s; }
-
-.skill:hover {
-  transform: translateY(-12px);
+.skill-card:hover {
+  transform: translateY(-8px);
   border-color: var(--border-hover);
-  box-shadow: 0 15px 40px var(--shadow-color);
+  box-shadow: 0 12px 30px var(--shadow-color);
   background: var(--transparent-bg);
 }
 
-.skill-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.skill-card span {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
 }
 
-.skill-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
-  border-radius: 15px;
+.skill-card .skill-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  border-radius: 12px;
   border: 2px solid var(--accent-color);
   background-color: var(--accent-color);
-  padding: 8px;
+  padding: 6px;
   transition: all 0.3s ease;
   object-fit: contain;
 }
 
-.skill:hover .skill-icon {
+.skill-card:hover .skill-icon {
   background-color: var(--accent-dark);
   border-color: var(--accent-dark);
   transform: scale(1.15) rotate(5deg);
-}
-
-.skill h3 {
-  margin: 0;
-  font-size: 1.3em;
-  color: var(--text-primary);
-  font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 /* Projects Section */
@@ -1160,6 +1240,15 @@ h2 {
     left: 14px;
   }
 
+  .education {
+    padding: 60px 20px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
   .skills {
     padding: 60px 20px;
   }
@@ -1168,23 +1257,52 @@ h2 {
     font-size: 1.8em;
   }
 
-  .skills-container {
-    gap: 15px;
+  .skills-category {
+    margin-bottom: 35px;
   }
 
-  .skill {
-    flex-basis: calc(50% - 7.5px);
-    min-width: 140px;
-    padding: 20px 15px;
+  .skills-category h3 {
+    font-size: 1em;
   }
 
-  .skill-icon {
-    width: 60px;
-    height: 60px;
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
-  .skill h3 {
+  .skill-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 5px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-light);
+    text-align: left;
+  }
+
+  .skill-card:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--transparent-bg);
+  }
+
+  .skill-card::before {
+    content: "\25b9";
+    color: var(--accent-color);
     font-size: 1.1em;
+  }
+
+  .skill-card .skill-icon {
+    display: none;
+  }
+
+  .skill-card span {
+    font-size: 0.95em;
+    font-weight: 500;
   }
 
   .projects {
@@ -1350,6 +1468,18 @@ h2 {
     font-size: 1.1em;
   }
 
+  .education {
+    padding: 40px 15px;
+  }
+
+  .education h2 {
+    font-size: 1.5em;
+  }
+
+  .education-card {
+    padding: 18px;
+  }
+
   .skills {
     padding: 40px 15px;
   }
@@ -1358,18 +1488,12 @@ h2 {
     font-size: 1.5em;
   }
 
-  .skills-container {
-    gap: 10px;
+  .skills-category h3 {
+    font-size: 0.9em;
   }
 
-  .skill {
-    flex-basis: 100%;
-    padding: 15px;
-  }
-
-  .skill-icon {
-    width: 50px;
-    height: 50px;
+  .skill-card span {
+    font-size: 0.9em;
   }
 
   .projects {
@@ -1423,5 +1547,105 @@ h2 {
 
   .site-footer p {
     margin: 4px 0;
+  }
+}
+
+
+/* CV Viewer Modal */
+.cv-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.cv-modal-overlay.visible {
+  display: flex;
+}
+
+.cv-modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.cv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-primary);
+}
+
+.cv-modal-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.1em;
+}
+
+.cv-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cv-download-btn {
+  padding: 8px 18px;
+  font-size: 0.85em;
+}
+
+.cv-modal-close {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.8em;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.cv-modal-close:hover {
+  color: var(--accent-color);
+}
+
+.cv-modal-body {
+  flex: 1;
+  background: #525659;
+}
+
+.cv-modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .cv-modal {
+    height: 85vh;
+  }
+
+  .cv-modal-header h3 {
+    font-size: 0.95em;
+  }
+
+  .cv-download-btn {
+    padding: 6px 14px;
+    font-size: 0.8em;
   }
 }

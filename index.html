@@ -28,6 +28,7 @@
       <nav>
         <a href="#about">About me</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">My projects</a>
         <a href="#contact">Contact</a>
@@ -39,13 +40,14 @@
       <div class="hero-content">
         <h1>Jerry Lundahl</h1>
         <p>
-          Full-stack student || Teknikhögskolan Lund <br /><br />
-          I love developing dynamic, user-friendly web pages that deliver
-          seamless experiences.
+          Full-Stack Developer || Teknikhögskolan Lund <br /><br />
+          Security-minded developer bridging software engineering, cloud
+          architecture, and 6 years of professional security operations
+          experience.
         </p>
         <div class="cta-buttons">
-          <a href="#projects" class="btn btn-primary"
-            >View My Work<img
+          <button type="button" id="viewCvBtn" class="btn btn-primary"
+            >CV<img
               src="Images/downloadArrow.gif"
               alt="arrow.gif"
               style="
@@ -54,7 +56,7 @@
                 border-radius: 20%;
                 margin-left: 10px;
               "
-          /></a>
+          /></button>
           <a href="#contact" class="btn btn-secondary">Get In Touch</a>
         </div>
       </div>
@@ -68,9 +70,12 @@
         <div class="about-text">
           <h1>About me</h1>
           <p>
-            I'm a full-stack student with a background in game development and
-            software engineering. I thrive on challenges and am eager to expand
-            my expertise in web development. <br /><br />Fluent in Swedish and
+            I'm a proactive, security-minded Fullstack Developer bridging
+            software engineering, cloud architecture, and professional
+            security operations. Graduating from Teknikhögskolan Lund in June
+            2026, I bring hands-on experience building full-stack applications
+            with .NET, Angular, and Azure, backed by 6 years as a Security
+            Guard and Assistant Team Lead. <br /><br />Fluent in Swedish and
             English, I also converse in Japanese and Thai. <br />In my spare
             time, I enjoy weight training, playing video games, and traveling.
           </p>
@@ -85,15 +90,15 @@
         <div class="timeline-item" data-timeline-animate>
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <h3>Data Analyst</h3>
-            <p class="company">University of West London</p>
-            <p class="date">March 2024 - June 2024</p>
-            <p class="description">Leading data analysis initiatives, developing insights from complex datasets, and creating visualization dashboards for academic research projects.</p>
+            <h3>Full Stack Developer (Internship / LIA)</h3>
+            <p class="company">Sprinta (Remote)</p>
+            <p class="date">December 2025 - May 2026</p>
+            <p class="description">Took complete ownership of the application lifecycle, architecting serverless microservices in Azure and containerizing environments with Docker. Built a full-stack CRM platform with C# / .NET Core, TypeScript, Angular & NextJS, and implemented Vector Similarity Search & RAG for contextual data processing.</p>
             <div class="skills-tag">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>Power BI</span>
-              <span>Statistical Analysis</span>
+              <span>C# / .NET Core</span>
+              <span>Angular</span>
+              <span>Azure</span>
+              <span>Docker</span>
             </div>
           </div>
         </div>
@@ -101,86 +106,110 @@
         <div class="timeline-item" data-timeline-animate>
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <h3>Data Analyst Intern</h3>
-            <p class="company">Protrainy</p>
-            <p class="date">September 2021 - January 2022</p>
-            <p class="description">Collaborated on machine learning projects, performed data preprocessing and feature engineering, supporting data science initiatives.</p>
+            <h3>Security Guard & Assistant Team Lead</h3>
+            <p class="company">Addici Security by Coor</p>
+            <p class="date">2020 - Present</p>
+            <p class="description">Operated and monitored complex integrated security systems and access control software in high-risk environments. Led operational response teams during critical incidents, and conducted ongoing risk checks and policy compliance reviews.</p>
             <div class="skills-tag">
-              <span>Machine Learning</span>
-              <span>Data Processing</span>
-              <span>Python</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-timeline-animate>
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <h3>Full-Stack Development Student</h3>
-            <p class="company">Teknikhögskolan Lund</p>
-            <p class="date">2022 - Present</p>
-            <p class="description">Pursuing comprehensive full-stack web development education, mastering modern frameworks, responsive design, and backend technologies.</p>
-            <div class="skills-tag">
-              <span>Web Development</span>
-              <span>Full-Stack</span>
-              <span>JavaScript</span>
-              <span>Database Design</span>
+              <span>Incident Response</span>
+              <span>Access Control</span>
+              <span>Risk Management</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="education" id="education" data-scroll-animate>
+      <h2>Education <span class="applyCyanColor">& Certifications</span></h2>
+      <div class="education-grid">
+        <div class="education-card" data-skill-animate>
+          <h3>Fullstack Developer Diploma</h3>
+          <p class="company">Teknikhögskolan Lund</p>
+          <p class="date">2024 - June 2026</p>
+          <p class="description">Core focus on secure backend architecture with Java, Spring Boot, and Spring Security, alongside object-oriented design, REST APIs, and modern frontend frameworks.</p>
+        </div>
+        <div class="education-card" data-skill-animate>
+          <h3>Academic Courses in Computer Science</h3>
+          <p class="company">Blekinge Institute of Technology (BTH)</p>
+          <p class="date">2016 - 2017</p>
+          <p class="description">Coursework in C++, algorithms, data structures, and discrete mathematics.</p>
+        </div>
+        <div class="education-card" data-skill-animate>
+          <h3>SC-200: Microsoft Security Operations Analyst</h3>
+          <p class="company">Microsoft Learn</p>
+          <p class="date">Course Completed</p>
+          <p class="description">Completed online coursework covering Microsoft Defender XDR and security operations. Official certification not yet obtained.</p>
+        </div>
+        <div class="education-card" data-skill-animate>
+          <h3>SC-900: Security, Compliance & Identity Fundamentals</h3>
+          <p class="company">Microsoft Learn</p>
+          <p class="date">Course Completed</p>
+          <p class="description">Completed online coursework covering Microsoft security, compliance, and identity fundamentals. Official certification not yet obtained.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="skills" id="skills" data-scroll-animate>
       <h2>My <span class="applyCyanColor">Skills</span></h2>
-      <div class="skills-container">
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
-            <img
-              src="Images/html_icon.png"
-              alt="HTML icon"
-              class="skill-icon"
-            />
-            <h3>HTML</h3>
-          </div>
+
+      <div class="skills-category">
+        <h3>Security & Cloud Basics</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-animate><span>Microsoft Defender XDR</span></div>
+          <div class="skill-card" data-skill-animate><span>KQL (Basics)</span></div>
+          <div class="skill-card" data-skill-animate><span>SC-200 / SC-900 Coursework</span></div>
+          <div class="skill-card" data-skill-animate><span>Azure Cloud</span></div>
+          <div class="skill-card" data-skill-animate><span>Docker</span></div>
+          <div class="skill-card" data-skill-animate><span>Git</span></div>
         </div>
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
+      </div>
+
+      <div class="skills-category">
+        <h3>Backend & Frameworks</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-animate>
+            <img src="Images/C#_icon.png" alt="C# icon" class="skill-icon" />
+            <span>C#</span>
+          </div>
+          <div class="skill-card" data-skill-animate><span>.NET Core</span></div>
+          <div class="skill-card" data-skill-animate><span>Java</span></div>
+          <div class="skill-card" data-skill-animate><span>Spring Boot</span></div>
+          <div class="skill-card" data-skill-animate><span>Spring Security</span></div>
+          <div class="skill-card" data-skill-animate><span>RESTful APIs</span></div>
+          <div class="skill-card" data-skill-animate><span>Vector Similarity Search & RAG</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Frontend Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-animate><span>TypeScript</span></div>
+          <div class="skill-card" data-skill-animate><span>Angular</span></div>
+          <div class="skill-card" data-skill-animate>
+            <img src="Images/javascript_icon.png" alt="JavaScript icon" class="skill-icon" />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-card" data-skill-animate>
+            <img src="Images/html_icon.png" alt="HTML icon" class="skill-icon" />
+            <span>HTML5</span>
+          </div>
+          <div class="skill-card" data-skill-animate>
             <img src="Images/css_icon.png" alt="CSS icon" class="skill-icon" />
-            <h3>CSS</h3>
+            <span>CSS3</span>
           </div>
         </div>
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
-            <img
-              src="Images/javascript_icon.png"
-              alt="Javascript icon"
-              class="skill-icon"
-            />
-            <h3>JavaScript</h3>
-          </div>
-        </div>
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
-            <img
-              src="Images/figma_icon.png"
-              alt="Figma icon"
-              class="skill-icon"
-            />
-            <h3>Figma</h3>
-          </div>
-        </div>
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
-            <img src="Images/c++_icon.png" alt="C++ icon" class="skill-icon" />
-            <h3>C++</h3>
-          </div>
-        </div>
-        <div class="skill" data-skill-animate>
-          <div class="skill-content">
+      </div>
+
+      <div class="skills-category">
+        <h3>Databases & Tools</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill-animate>
             <img src="Images/SQL_icon.png" alt="SQL icon" class="skill-icon" />
-            <h3>SQL</h3>
+            <span>SQL (MySQL & NoSQL)</span>
           </div>
+          <div class="skill-card" data-skill-animate><span>Azure Cosmos DB</span></div>
+          <div class="skill-card" data-skill-animate><span>Visual Studio / VS Code</span></div>
         </div>
       </div>
     </div>
@@ -300,6 +329,21 @@
         /></a>
       </div>
     </footer>
+
+    <div class="cv-modal-overlay" id="cvModalOverlay">
+      <div class="cv-modal">
+        <div class="cv-modal-header">
+          <h3>Jerry Lundahl - CV</h3>
+          <div class="cv-modal-actions">
+            <a href="CV_Jerry_Lundahl.pdf" download="Jerry_Lundahl_CV.pdf" class="btn btn-primary cv-download-btn">Download</a>
+            <button type="button" class="cv-modal-close" id="cvModalClose" aria-label="Close">&times;</button>
+          </div>
+        </div>
+        <div class="cv-modal-body">
+          <iframe src="CV_Jerry_Lundahl.pdf" title="Jerry Lundahl CV"></iframe>
+        </div>
+      </div>
+    </div>
 
     <script src="profilePage.js"></script>
   </body>

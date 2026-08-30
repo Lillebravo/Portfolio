@@ -129,6 +129,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial check on page load
   toggleFooterVisibility();
 
+  // CV Viewer Modal
+  const viewCvBtn = document.getElementById("viewCvBtn");
+  const cvModalOverlay = document.getElementById("cvModalOverlay");
+  const cvModalClose = document.getElementById("cvModalClose");
+
+  function openCvModal() {
+    cvModalOverlay.classList.add("visible");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCvModal() {
+    cvModalOverlay.classList.remove("visible");
+    document.body.style.overflow = "";
+  }
+
+  if (viewCvBtn && cvModalOverlay) {
+    viewCvBtn.addEventListener("click", openCvModal);
+    cvModalClose.addEventListener("click", closeCvModal);
+
+    cvModalOverlay.addEventListener("click", function (event) {
+      if (event.target === cvModalOverlay) {
+        closeCvModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && cvModalOverlay.classList.contains("visible")) {
+        closeCvModal();
+      }
+    });
+  }
+
   // Flatten container for mobile responsive
   function flattenContainer(selectedContainer) {
     const container = document.querySelector(selectedContainer);
