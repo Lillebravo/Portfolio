@@ -63,7 +63,15 @@
       </div>
       <div class="hero-image">
         <img src="Images/profile_picture.png" alt="Jerry Lundahl" />
+        <div class="availability-bubble" aria-label="Available for new projects">
+          <span aria-hidden="true"></span>
+          Available for hire
+        </div>
       </div>
+      <a class="hero-scroll-link" href="#about" aria-label="Scroll to About me">
+        <span>Scroll to explore</span>
+        <span class="hero-scroll-arrow" aria-hidden="true">&#8595;</span>
+      </a>
     </div>
 
     <div class="about" id="about" data-scroll-animate>
@@ -83,6 +91,17 @@
             converse in Japanese and Thai. <br />In my spare time, I enjoy weight training, 
             playing video games, and traveling.
           </p>
+          <div class="specialties">
+            <h2>Specialties</h2>
+            <ul>
+              <li>Full-Stack Web Development</li>
+              <li>SaaS & Workflow Automation</li>
+              <li>SEO-Driven Websites</li>
+              <li>Cloud & DevOps Foundations</li>
+              <li>REST API Development</li>
+              <li>Business-Focused Solutions</li>
+            </ul>
+          </div>
           <a href="#contact" class="btn btn-primary">Contact Me</a>
         </div>
       </div>
@@ -186,7 +205,8 @@
     </div>
 
     <div class="projects" id="projects" data-tooltip="See it for yourself here!" data-scroll-animate>
-      <h2>My <span class="applyCyanColor">Projects</span></h2>
+      <h2>Featured <span class="applyCyanColor">Projects</span></h2>
+      <p class="section-intro">A selection of practical products, platforms, and tools built around real user needs.</p>
       <div class="projects-container">
         <div class="project" data-project-animate>
           <div class="project-content">
@@ -334,10 +354,12 @@
     </div>
 
     <div class="skills" id="skills" data-scroll-animate>
-      <h2>My <span class="applyCyanColor">Skills</span></h2>
+      <h2>Technical <span class="applyCyanColor">Skills</span></h2>
+      <p class="section-intro">A focused toolkit for building reliable web applications, automation, and cloud-ready services.</p>
 
+      <div class="skills-showcase">
       <div class="skills-category">
-        <h3>Security & Cloud Basics</h3>
+        <h3>Security & Cloud</h3>
         <div class="skills-grid">
           <div class="skill-card" data-skill-animate><span>Microsoft Defender XDR</span></div>
           <div class="skill-card" data-skill-animate><span>KQL (Basics)</span></div>
@@ -394,6 +416,7 @@
           <div class="skill-card" data-skill-animate><span>Azure Cosmos DB</span></div>
           <div class="skill-card" data-skill-animate><span>Visual Studio / VS Code</span></div>
         </div>
+      </div>
       </div>
     </div>
 
