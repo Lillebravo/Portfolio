@@ -26,13 +26,11 @@
       <span class="menu-toggle">☰</span>
       <a href="#home"><img src="Images/logo.png" alt="Logo" class="logo" /></a>
       <nav>
-        <a href="#about">About me</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">My projects</a>
-        <a href="#services">Services</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Om</a>
+        <a href="#projects">Projekt &amp; case</a>
+        <a href="#services">Tj&auml;nster</a>
+        <a href="#articles">Skriverier</a>
+        <a href="#contact">Kontakt</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
     </div>
@@ -41,69 +39,63 @@
       <div class="hero-content">
         <h1>Jerry Lundahl</h1>
         <p>
-          Full-Stack Developer & Founder of ScaleWeb Solutions <br /><br />
-          I help businesses grow online with custom web development, SaaS automation, and 
-          strategic SEO optimization. Let me turn your vision into a high-performing digital
-          presence that converts visitors into customers.
+          <strong>Fullstack Developer &amp; Web Solutions Consultant</strong><br /><br />
+          Jag bygger moderna, h&ouml;gpresterande webbsystem och hj&auml;lper f&ouml;retag att digitalisera
+          processer, skapa b&auml;ttre kundupplevelser och synas d&auml;r deras kunder letar.
         </p>
         <div class="cta-buttons">
-          <button type="button" id="viewCvBtn" class="btn btn-primary"
-            >CV<img
-              src="Images/downloadArrow.gif"
-              alt="arrow.gif"
-              style="
-                width: 30px;
-                height: 30px;
-                border-radius: 20%;
-                margin-left: 10px;
-              "
-          /></button>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="#projects" class="btn btn-primary">Se utvalda projekt</a>
+          <a href="#services" class="btn btn-secondary">Tjanster for foretag</a>
         </div>
       </div>
       <div class="hero-image">
         <img src="Images/profile_picture.png" alt="Jerry Lundahl" />
         <div class="availability-bubble" aria-label="Available for new projects">
           <span aria-hidden="true"></span>
-          Available for hire
+          Tillg&auml;nglig f&ouml;r uppdrag
         </div>
       </div>
-      <a class="hero-scroll-link" href="#about" aria-label="Scroll to About me">
-        <span>Scroll to explore</span>
+      <a class="hero-scroll-link" href="#expertise" aria-label="Ga till expertis">
+        <span>Upptack mer</span>
         <span class="hero-scroll-arrow" aria-hidden="true">&#8595;</span>
       </a>
     </div>
+
+    <section class="expertise" id="expertise" data-scroll-animate>
+      <div class="section-heading">
+        <p class="section-kicker">Teknik som skapar aff&auml;rsnytta</p>
+        <h2>Fr&aring;n id&eacute; till <span class="applyCyanColor">fungerande produkt.</span></h2>
+      </div>
+      <div class="expertise-grid">
+        <article class="expertise-item"><strong>Fullstack</strong><span>.NET, TypeScript, Angular och API:er</span></article>
+        <article class="expertise-item"><strong>Automatisering</strong><span>Digitala fl&ouml;den som sparar tid och minskar fel</span></article>
+        <article class="expertise-item"><strong>Moln &amp; s&auml;kerhet</strong><span>Azure, Docker och s&auml;kerhetsmedveten arkitektur</span></article>
+        <article class="expertise-item"><strong>Synlighet</strong><span>Snabba webbplatser, SEO och konverteringsfokus</span></article>
+      </div>
+    </section>
 
     <div class="about" id="about" data-scroll-animate>
       <div class="about-content">
         <div class="about-text">
           <h1>About me</h1>
           <p>
-            I'm a Fullstack Developer and founder of <strong>ScaleWeb Solutions</strong>, 
-            specializing in building high-performing websites and SaaS tools that drive real 
-            business results. I combine technical expertise in .NET, Angular, and Azure with 
-            a strategic focus on web development and SEO. <br /><br />I help businesses 
-            establish and grow their online presence through custom web development, 
-            workflow automation that saves time and money, and search engine optimization 
-            that drives qualified traffic. Whether you need a stunning new website, a custom
-            SaaS platform, or an SEO strategy to dominate your market, I deliver solutions
-            tailored to your business goals. <br /><br />Fluent in Swedish and English, I also
-            converse in Japanese and Thai. <br />In my spare time, I enjoy weight training, 
-            playing video games, and traveling.
+            Jag &auml;r fullstackutvecklare och grundare av <strong>ScaleWeb Solutions</strong>.
+            Jag trivs d&auml;r aff&auml;rsbehov och teknik m&ouml;ts: n&auml;r en otydlig process ska bli ett enkelt
+            verktyg, eller n&auml;r en webbplats ska bli en kanal som faktiskt driver aff&auml;ren.
+            <br /><br />Min verktygsl&aring;da omfattar .NET, Angular, Azure, s&auml;kerhetsgrunder och
+            SEO. Jag arbetar hela v&auml;gen fr&aring;n uppt&auml;ckt och teknisk planering till utveckling,
+            lansering och vidareutveckling.
           </p>
           <div class="specialties">
-            <h2>Specialties</h2>
+            <h2>Kompetens</h2>
             <ul>
-              <li>Full-Stack Web Development</li>
-              <li>SaaS & Workflow Automation</li>
-              <li>SEO-Driven Websites</li>
-              <li>Cloud & DevOps Foundations</li>
-              <li>REST API Development</li>
-              <li>App Development</li>
-              <li>Business-Focused Solutions</li>
+              <li>Fullstack och API-utveckling</li>
+              <li>SaaS och processautomatisering</li>
+              <li>Prestanda och SEO</li>
+              <li>Azure, Docker och DevOps-grunder</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <button type="button" id="viewCvBtn" class="btn btn-primary">Visa CV</button>
         </div>
       </div>
     </div>
@@ -206,25 +198,15 @@
     </div>
 
     <div class="projects" id="projects" data-tooltip="See it for yourself here!" data-scroll-animate>
-      <h2>Featured <span class="applyCyanColor">Projects</span></h2>
-      <p class="section-intro">A selection of practical products, platforms, and tools built around real user needs.</p>
+      <h2>Utvalda <span class="applyCyanColor">case</span></h2>
+      <p class="section-intro">Varje projekt b&ouml;rjar med ett verkligt behov och &auml;r byggt f&ouml;r att skapa ett tydligt, anv&auml;ndbart resultat.</p>
       <div class="projects-container">
         <div class="project" data-project-animate>
           <div class="project-content">
             <a href="https://github.com/Lillebravo/wedding_planner" class="projectHeader" target="_blank" rel="noopener">Wedding RSVP & Seating Planner</a>
-            <p>
-              A full-stack website built for a friend's wedding, letting them
-              send guests a link to RSVP and report allergies. The couple
-              could add event info like the venue's GPS location and a full
-              day itinerary (e.g. 15:00 ceremony, 17:00 dinner). <br /><br />
-              An algorithm auto-seated every guest based on defined
-              relationships, always placing at least one known face at each
-              table while keeping conflicting guests apart, with manual
-              drag-and-drop seating adjustments on top. <br /><br />The
-              couple could then print a PNG floor plan of the reception
-              tables and a PDF list for the kitchen staff with every guest's
-              allergy restrictions.
-            </p>
+            <div class="case-detail"><h3>Problemet</h3><p>Gastlistor, allergier och bordsplacering blev snabbt ett manuellt och svartoverskadligt planeringsarbete.</p></div>
+            <div class="case-detail"><h3>Losningen</h3><p>En fullstackapp for OSA, schema och allergiinformation, med en algoritm som foreslar bordsplacering och manuella justeringar via drag-and-drop.</p></div>
+            <div class="case-detail"><h3>Resultatet</h3><p>Ett samlat flode fran inbjudan till utskrivbar bordsplan och kokslista, sa att paret kunde fokusera pa arrangemanget.</p></div>
             <div class="project-actions">
               <a class="project-action project-code" href="https://github.com/Lillebravo/wedding_planner" target="_blank" rel="noopener"><svg class="project-action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2A5.6 5.6 0 0 0 19.3 3.4 5.2 5.2 0 0 0 19.2.1S18 .1 15 2.1a14 14 0 0 0-6 0C6 .1 4.8.1 4.8.1a5.2 5.2 0 0 0-.1 3.3 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 18v4"/><path d="M9 18c-4.5 1.4-5-2-7-2"/></svg>Code</a>
               <span class="project-action project-demo is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Live demo coming soon">Demo</span>
@@ -241,14 +223,9 @@
           </div>
           <div class="project-content">
             <a href="" class="projectHeader">jCRM</a>
-            <p>
-              A full-stack CRM built from scratch for Sprinta AB during my
-              internship, where I took complete ownership from idea to
-              finished product. <br /><br />The CRM uses vector similarity
-              search to match products against companies with similar
-              profiles to past successful sales, helping the sales team
-              target the right leads with the right products.
-            </p>
+            <div class="case-detail"><h3>Problemet</h3><p>Saljteamet behovde ett battre satt att hitta liknande tidigare affarer och prioritera ratt produkt for varje prospekt.</p></div>
+            <div class="case-detail"><h3>Losningen</h3><p>Jag tog agarskap fran ide till leverans och byggde ett CRM med .NET, TypeScript och molnbaserade tjanster. Vektorsokning kopplar bolagsprofiler till lyckade affarer.</p></div>
+            <div class="case-detail"><h3>Resultatet</h3><p>Ett beslutsstod som gor tidigare saljerfarenhet sokbar och hjalper teamet att rikta sina insatser battre.</p></div>
             <div class="project-actions">
               <span class="project-action project-code is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Source code is private"><svg class="project-action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2A5.6 5.6 0 0 0 19.3 3.4 5.2 5.2 0 0 0 19.2.1S18 .1 15 2.1a14 14 0 0 0-6 0C6 .1 4.8.1 4.8.1a5.2 5.2 0 0 0-.1 3.3 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 18v4"/><path d="M9 18c-4.5 1.4-5-2-7-2"/></svg>Code</span>
               <span class="project-action project-demo is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Live demo coming soon">Demo</span>
@@ -259,20 +236,9 @@
         <div class="project" data-project-animate>
           <div class="project-content">
             <a href="" class="projectHeader">Provsmart - Coming soon!</a>
-            <p>
-              A phone app that helps customers keep track of their
-              subscription trial periods, reminding them a set number of
-              days before a trial ends with a link to easily cancel it.
-              <br /><br />
-              It uses AI to scan the user's email to detect new
-              subscriptions automatically (with the option to opt out and
-              add subscriptions manually), and supports multiple email
-              addresses so users can see which email was used for which
-              trial. <br /><br />
-              Provsmart also gives an overview of every active
-              subscription, its monthly and yearly cost, and its renewal
-              date.
-            </p>
+            <div class="case-detail"><h3>Problemet</h3><p>Provperioder blir latt bortglomda, vilket gor att kunder fortsatter betala for tjanster de inte langre anvander.</p></div>
+            <div class="case-detail"><h3>Losningen</h3><p>En mobilapp som samlar abonnemang, paminner fore fornyelse och anvander AI-stod for att upptacka nya prenumerationer i e-post.</p></div>
+            <div class="case-detail"><h3>Resultatet</h3><p>En tydlig kostnadsoversikt och battre kontroll over aktiva provperioder. Under utveckling.</p></div>
             <div class="project-actions">
               <span class="project-action project-code is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Source code coming soon"><svg class="project-action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2A5.6 5.6 0 0 0 19.3 3.4 5.2 5.2 0 0 0 19.2.1S18 .1 15 2.1a14 14 0 0 0-6 0C6 .1 4.8.1 4.8.1a5.2 5.2 0 0 0-.1 3.3 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 18v4"/><path d="M9 18c-4.5 1.4-5-2-7-2"/></svg>Code</span>
               <span class="project-action project-demo is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Live demo coming soon">Demo</span>
@@ -289,21 +255,9 @@
           </div>
           <div class="project-content">
             <a href="" class="projectHeader">Business Invoicing & Bookkeeping System - Coming soon!</a>
-            <p>
-              A system that lets companies automatically generate
-              professional invoices and keep their books in order for
-              year-end closing. <br /><br />
-              Users can save job templates that scale — for example, a
-              craftsman tiling a 10 sqm bathroom can save that job and later
-              enter 15 sqm to get an estimated work time and price, with
-              material costs like grout, silicone, and tiles scaling
-              automatically (while still letting them adjust for pricier
-              materials). <br /><br />
-              It also shows net margins per job and suggests eligible tax
-              deductions for the bookkeeping, and can generate a PDF report 
-              for the accountant at year-end closing
-              including all invoices, expenses, and tax deductions in a IIF-compliant format.
-            </p>
+            <div class="case-detail"><h3>Problemet</h3><p>Sma foretag hanterar ofta offerter, fakturor och jobbkalkyler i separata kalkylblad och system.</p></div>
+            <div class="case-detail"><h3>Losningen</h3><p>Ett system for skalbara jobbmallar, prisberakning, fakturering och bokforingsunderlag med rapporter till redovisningsbyran.</p></div>
+            <div class="case-detail"><h3>Resultatet</h3><p>Ett planerat digitalt arbetsflode som ger battre kontroll over marginaler och mindre administration. Under utveckling.</p></div>
             <div class="project-actions">
               <span class="project-action project-code is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Source code coming soon"><svg class="project-action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2A5.6 5.6 0 0 0 19.3 3.4 5.2 5.2 0 0 0 19.2.1S18 .1 15 2.1a14 14 0 0 0-6 0C6 .1 4.8.1 4.8.1a5.2 5.2 0 0 0-.1 3.3 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 18v4"/><path d="M9 18c-4.5 1.4-5-2-7-2"/></svg>Code</span>
               <span class="project-action project-demo is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Live demo coming soon">Demo</span>
@@ -314,20 +268,9 @@
         <div class="project" data-project-animate>
           <div class="project-content">
             <a href="" class="projectHeader">OmniGuard - Coming soon!</a>
-            <p>
-              An app that modernizes reporting for security guards, using
-              speech-to-text and AI assistance to write reports that follow
-              industry standards and never miss information customers
-              require — letting security companies invoice for every
-              response. <br /><br />
-              Planned features include multi-language support (since many
-              guards aren't native Swedish speakers), text-to-speech
-              instructions for each site, interactive maps with compass
-              orientation, automatic "on-site" marking via geofencing for
-              alarm responses, and a chatbot to help guards handle
-              situations they're unsure how to resolve — like a fridge alarm
-              that won't reset.
-            </p>
+            <div class="case-detail"><h3>Problemet</h3><p>Vaktpersonal behover skriva fullstandiga rapporter under tidspress, medan kundkrav och platsinstruktioner ar komplexa.</p></div>
+            <div class="case-detail"><h3>Losningen</h3><p>En app med tal-till-text, AI-stod for strukturerade rapporter, flersprakighet, platsinstruktioner och geofencing.</p></div>
+            <div class="case-detail"><h3>Resultatet</h3><p>En produktide som kan minska dokumentationstiden och hjalpa bevakningsbolag att dokumentera fakturerbart arbete. Under utveckling.</p></div>
             <div class="project-actions">
               <span class="project-action project-code is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Source code coming soon"><svg class="project-action-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2A5.6 5.6 0 0 0 19.3 3.4 5.2 5.2 0 0 0 19.2.1S18 .1 15 2.1a14 14 0 0 0-6 0C6 .1 4.8.1 4.8.1a5.2 5.2 0 0 0-.1 3.3 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 18v4"/><path d="M9 18c-4.5 1.4-5-2-7-2"/></svg>Code</span>
               <span class="project-action project-demo is-unavailable" role="button" tabindex="0" aria-disabled="true" data-tooltip="Live demo coming soon">Demo</span>
@@ -341,38 +284,47 @@
     </div>
 
     <div class="services" id="services" data-scroll-animate>
-      <h2>My <span class="applyCyanColor">Services</span></h2>
+      <h2>Tj&auml;nster &amp; <span class="applyCyanColor">samarbete</span></h2>
       <p class="services-intro">
-        Through my company
+        Genom
         <img src="Images/scalewebsolutions_logo.png" alt="ScaleWeb Solutions logo" class="scaleweb-logo" />
-        <strong>ScaleWeb Solutions</strong>, I offer freelance web development
-        and consulting services for businesses looking to grow online.
+        <strong>ScaleWeb Solutions</strong> erbjuder jag konsulttj&auml;nster f&ouml;r f&ouml;retag som vill utveckla sin digitala aff&auml;r.
       </p>
       <div class="services-grid">
         <div class="service-card" data-skill-animate>
-          <h3>Web Development</h3>
+          <h3>Webbplatser &amp; webbl&ouml;sningar</h3>
           <p>
-            Sleek, user-friendly, and modern websites built to represent your
-            company and turn visitors into customers.
+            Snabba, mobilanpassade och konverteringsfokuserade webbplatser som representerar ert foretag.
           </p>
         </div>
         <div class="service-card" data-skill-animate>
-          <h3>SaaS & Workflow Automation</h3>
+          <h3>Automatisering &amp; kundportaler</h3>
           <p>
-            Custom SaaS tools that automate repetitive workflows, saving your
-            company time and money.
+            Skraddarsydda verktyg som ersatter Excel-ark och manuell administration med enklare digitala floden.
           </p>
         </div>
         <div class="service-card" data-skill-animate>
-          <h3>SEO Optimization</h3>
+          <h3>Lokal SEO &amp; sokbarhet</h3>
           <p>
-            Search engine optimization to make sure your website gets found
-            and drives real traffic.
+            On-page-optimering, strukturerad data och teknisk grund som gor er enklare att hitta.
           </p>
         </div>
       </div>
-      <a href="#contact" class="btn btn-primary services-cta">Get a Quote</a>
+      <p class="services-note">Tillg&auml;nglig f&ouml;r punktinsatser, fastprisprojekt eller l&auml;ngre uppdrag p&aring; konsultbasis via eget bolag.</p>
+      <a href="#contact" class="btn btn-primary services-cta">Boka ett samtal</a>
     </div>
+
+    <section class="articles" id="articles" data-scroll-animate>
+      <div class="section-heading">
+        <p class="section-kicker">Skriverier</p>
+        <h2>Insikter fran <span class="applyCyanColor">bygget.</span></h2>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card" data-skill-animate><p class="article-meta">WEBBPRESTANDA</p><h3>Varfor en snabb webbplats ar en battre saljare</h3><p>Prestanda, tydlighet och mobilupplevelse ar en del av varje digital affar, inte en eftertanke.</p><span class="article-status">Artikel kommer snart</span></article>
+        <article class="article-card" data-skill-animate><p class="article-meta">AUTOMATISERING</p><h3>Nar Excel blir en flaskhals</h3><p>Tecken pa att ett manuellt arbetsflode ar redo att bli ett skraddarsytt digitalt verktyg.</p><span class="article-status">Artikel kommer snart</span></article>
+        <article class="article-card" data-skill-animate><p class="article-meta">TEKNIK &amp; AFF&Auml;R</p><h3>Fr&aring;n krav till h&aring;llbar webbl&ouml;sning</h3><p>Hur tekniska beslut kan kopplas till tydliga m&aring;l: mindre administration, b&auml;ttre data och n&ouml;jdare kunder.</p><span class="article-status">Artikel kommer snart</span></article>
+      </div>
+    </section>
 
     <div class="skills" id="skills" data-scroll-animate>
       <h2>Technical <span class="applyCyanColor">Skills</span></h2>
@@ -530,8 +482,8 @@
     </div>
 
     <footer class="site-footer">
-      <p>&copy; 2026 ScaleWeb Solutions. All rights reserved.</p>
-      <p>Crafted with passion for web development</p>
+      <p>&copy; 2026 ScaleWeb Solutions. Innehar F-skatt.</p>
+      <p>Fullstackutveckling, digitala verktyg och SEO for foretag.</p>
       <div class="contact-icons">
         <a
           href="https://se.linkedin.com/in/jerry-lundahl-b15299330"
@@ -543,6 +495,7 @@
           target="_blank"
           ><img src="Images/discord_icon.png" alt="Discord"
         /></a>
+        <a href="https://github.com/Lillebravo" target="_blank" rel="noopener">GitHub</a>
       </div>
     </footer>
 
