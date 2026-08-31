@@ -71,7 +71,17 @@
         <div class="about-text">
           <h1>About me</h1>
           <p>
-            I'm a Fullstack Developer and founder of <strong>ScaleWeb Solutions</strong>, specializing in building high-performing websites and SaaS tools that drive real business results. Graduating from Teknikhögskolan Lund in June 2026, I combine technical expertise in .NET, Angular, and Azure with a strategic focus on web development and SEO. <br /><br />I help businesses establish and grow their online presence through custom web development, workflow automation that saves time and money, and search engine optimization that drives qualified traffic. Whether you need a stunning new website, a custom SaaS platform, or an SEO strategy to dominate your market, I deliver solutions tailored to your business goals. <br /><br />Fluent in Swedish and English, I also converse in Japanese and Thai. <br />In my spare time, I enjoy weight training, playing video games, and traveling.
+            I'm a Fullstack Developer and founder of <strong>ScaleWeb Solutions</strong>, 
+            specializing in building high-performing websites and SaaS tools that drive real 
+            business results. I combine technical expertise in .NET, Angular, and Azure with 
+            a strategic focus on web development and SEO. <br /><br />I help businesses 
+            establish and grow their online presence through custom web development, 
+            workflow automation that saves time and money, and search engine optimization 
+            that drives qualified traffic. Whether you need a stunning new website, a custom
+            SaaS platform, or an SEO strategy to dominate your market, I deliver solutions
+            tailored to your business goals. <br /><br />Fluent in Swedish and English, I also
+            converse in Japanese and Thai. <br />In my spare time, I enjoy weight training, 
+            playing video games, and traveling.
           </p>
           <a href="#contact" class="btn btn-primary">Contact Me</a>
         </div>
@@ -87,7 +97,11 @@
             <h3>Full Stack Developer (Internship / LIA)</h3>
             <p class="company">Sprinta (Remote)</p>
             <p class="date">December 2025 - May 2026</p>
-            <p class="description">Took complete ownership of the application lifecycle, architecting serverless microservices in Azure and containerizing environments with Docker. Built a full-stack CRM platform with C# / .NET Core, TypeScript, Angular & NextJS, and implemented Vector Similarity Search & RAG for contextual data processing.</p>
+            <p class="description">Took complete ownership of the application lifecycle, 
+              architecting serverless microservices in Azure and containerizing environments
+              with Docker. Built a full-stack CRM platform with C# / .NET Core, TypeScript, 
+              Angular & NextJS, and implemented Vector Similarity Search & RAG for contextual
+              data processing.</p>
             <div class="skills-tag">
               <span>C# / .NET Core</span>
               <span>TypeScript</span>
@@ -104,7 +118,10 @@
             <h3>Security Guard & Assistant Team Lead</h3>
             <p class="company">Addici Security by Coor</p>
             <p class="date">2020 - Present</p>
-            <p class="description">Operated and monitored complex integrated security systems and access control software in high-risk environments. Led operational response teams during critical incidents, and conducted ongoing risk checks and policy compliance reviews.</p>
+            <p class="description">Operated and monitored complex integrated security systems
+              and access control software in high-risk environments. Led operational response
+              teams during critical incidents, and conducted ongoing risk checks and policy 
+              compliance reviews.</p>
             <div class="skills-tag">
               <span>Incident Response</span>
               <span>Access Control</span>
@@ -122,7 +139,9 @@
           <h3>Fullstack Developer Diploma</h3>
           <p class="company">Teknikhögskolan Lund</p>
           <p class="date">2024 - June 2026</p>
-          <p class="description">Core focus on secure backend architecture with Java, Spring Boot, and Spring Security, alongside object-oriented design, REST APIs, and modern frontend frameworks.</p>
+          <p class="description">Core focus on secure backend architecture with Java, Spring
+             Boot, and Spring Security, alongside object-oriented design, REST APIs, and modern
+             frontend frameworks.</p>
         </div>
         <div class="education-card" data-skill-animate>
           <h3>Academic Courses in Computer Science</h3>
@@ -134,13 +153,15 @@
           <h3>SC-200: Microsoft Security Operations Analyst</h3>
           <p class="company">Microsoft Learn</p>
           <p class="date">Course Completed July 2026</p>
-          <p class="description">Completed online coursework covering Microsoft Defender XDR and security operations. Official certification not yet obtained.</p>
+          <p class="description">Completed online coursework covering Microsoft Defender XDR 
+            and security operations. Official certification not yet obtained.</p>
         </div>
         <div class="education-card" data-skill-animate>
           <h3>SC-900: Security, Compliance & Identity Fundamentals</h3>
           <p class="company">Microsoft Learn</p>
           <p class="date">Course Completed July 2026</p>
-          <p class="description">Completed online coursework covering Microsoft security, compliance, and identity fundamentals. Official certification not yet obtained.</p>
+          <p class="description">Completed online coursework covering Microsoft security, 
+            compliance, and identity fundamentals. Official certification not yet obtained.</p>
         </div>
       </div>
     </div>
@@ -362,29 +383,84 @@
         <div class="contact-header">
           <h2>G E T &nbsp &nbsp I N &nbsp &nbsp T O U C H</h2>
         </div>
-        <form class="contact-form">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-            required
-          ></textarea>
-          <button type="submit">SUBMIT</button>
-        </form>
+        <div class="contact-intro">
+          <p class="contact-eyebrow">Have a project in mind?</p>
+          <h2>Let's build something <span class="applyCyanColor">useful.</span></h2>
+          <p>Tell me a little about your goals, timeline, and budget. I'll get back to you with the clearest next step.</p>
+        </div>
+
+        <div class="contact-content">
+          <form class="contact-form">
+            <h3>Project details</h3>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="firstName">First name <span aria-hidden="true">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" autocomplete="given-name" required />
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last name <span aria-hidden="true">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" autocomplete="family-name" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="projectType">Project type</label>
+                <select id="projectType" name="projectType">
+                  <option value="">Select a service</option>
+                  <option value="website">Website development</option>
+                  <option value="saas">SaaS or workflow automation</option>
+                  <option value="seo">SEO optimization</option>
+                  <option value="consulting">Development consulting</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="budget">Budget range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option value="under-10000">Under 10,000 SEK</option>
+                  <option value="10000-25000">10,000 - 25,000 SEK</option>
+                  <option value="25000-50000">25,000 - 50,000 SEK</option>
+                  <option value="50000-plus">50,000+ SEK</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Tell me about your project <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="What are you looking to build, and what would success look like?" required></textarea>
+            </div>
+            <button type="submit">Send inquiry <span aria-hidden="true">&#8594;</span></button>
+          </form>
+
+          <aside class="contact-details" aria-label="Contact information">
+            <h3>Start a conversation</h3>
+            <p>Whether you have a detailed brief or just the start of an idea, you're welcome to reach out.</p>
+            <a class="contact-method" href="mailto:jerry.lundahl@scalewebsolutions.com">
+              <span class="contact-method-icon" aria-hidden="true">@</span>
+              <span><small>Email</small>jerry.lundahl@scalewebsolutions.com</span>
+            </a>
+            <a class="contact-method" href="https://se.linkedin.com/in/jerry-lundahl-b15299330" target="_blank" rel="noopener">
+              <span class="contact-method-icon" aria-hidden="true">in</span>
+              <span><small>LinkedIn</small>Connect with me</span>
+            </a>
+            <div class="contact-method">
+              <span class="contact-method-icon" aria-hidden="true">&#9679;</span>
+              <span><small>Based in</small>Sweden, working remotely</span>
+            </div>
+            <div class="response-card">
+              <span class="status-dot" aria-hidden="true"></span>
+              <div>
+                <h4>Available for new projects</h4>
+                <p>I typically reply within one business day.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
     </div>
 
