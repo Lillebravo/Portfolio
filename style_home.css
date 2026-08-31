@@ -13,6 +13,9 @@
   --shadow-color: rgba(74, 143, 209, 0.18);
   --transparent-bg: rgba(255, 255, 255, 0.05);
   --card-bg: rgba(255, 255, 255, 0.03);
+  --input-bg: rgba(66, 64, 71, 0.6);
+  --input-focus-bg: rgba(66, 64, 71, 0.8);
+  --input-placeholder: rgba(255, 255, 255, 0.5);
 }
 
 body.light-mode {
@@ -29,6 +32,10 @@ body.light-mode {
   --shadow-color: rgba(0, 136, 204, 0.15);
   --transparent-bg: rgba(0, 136, 204, 0.05);
   --card-bg: rgba(0, 136, 204, 0.03);
+  --input-bg: #ffffff;
+  --input-focus-bg: #ffffff;
+  --input-placeholder: #758397;
+  --border-light: rgba(26, 44, 74, 0.16);
 }
 
 /* Global Styles */
@@ -1217,7 +1224,7 @@ h2 {
 .contact-form select {
   box-sizing: border-box;
   width: 100%;
-  background: rgba(66, 64, 71, 0.6);
+  background: var(--input-bg);
   border-radius: 8px;
   border: 1px solid var(--border-light);
   padding: 14px 15px;
@@ -1234,12 +1241,12 @@ h2 {
   outline: none;
   border-color: var(--border-hover);
   box-shadow: 0 0 15px var(--shadow-color);
-  background: rgba(66, 64, 71, 0.8);
+  background: var(--input-focus-bg);
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--input-placeholder);
 }
 
 .contact-form h3,
