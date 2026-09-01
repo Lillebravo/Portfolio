@@ -6,12 +6,8 @@
   "workers_dev": false,
   "routes": [
     {
-      "pattern": "jerrylundahl.com/api/contact",
-      "zone_name": "jerrylundahl.com"
-    },
-    {
-      "pattern": "www.jerrylundahl.com/api/contact",
-      "zone_name": "jerrylundahl.com"
+      "pattern": "api.jerrylundahl.com",
+      "custom_domain": true
     }
   ],
   "vars": {
