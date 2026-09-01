@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
       statusMessage.className = "form-status";
 
       try {
-        const response = await fetch("https://api.jerrylundahl.com", {
+        const response = await fetch("https://portfolio-contact-form.jerry-lundahl.workers.dev", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(Object.fromEntries(formData.entries()))

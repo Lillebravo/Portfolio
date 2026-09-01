@@ -3,7 +3,8 @@
   "name": "portfolio-contact-form",
   "main": "src/index.js",
   "compatibility_date": "2026-08-01",
-  "workers_dev": false,
+  "workers_dev": true,
+  "preview_urls": false,
   "routes": [
     {
       "pattern": "api.jerrylundahl.com",
