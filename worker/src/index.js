@@ -1,3 +1,5 @@
+import { EmailMessage } from "cloudflare:email";
+
 const RECIPIENT = "jerry.lundahl@hotmail.com";
 const SENDER = "portfolio@jerrylundahl.com";
 const PROJECT_TYPES = new Set(["", "website", "app", "saas", "seo", "consulting", "other"]);
@@ -36,6 +38,7 @@ export default {
 
       const submission = validateSubmission(body);
       if (!submission) {
+        console.warn("Contact form rejected: invalid submission");
         return jsonResponse({ success: false }, 400, origin);
       }
 
@@ -45,17 +48,12 @@ export default {
         env
       );
       if (!turnstileIsValid) {
+        console.warn("Contact form rejected: Turnstile validation failed");
         return jsonResponse({ success: false }, 400, origin);
       }
 
-      await env.EMAIL.send({
-        to: RECIPIENT,
-        from: { email: SENDER, name: "Portfolio contact form" },
-        replyTo: submission.email,
-        subject: `New portfolio inquiry from ${submission.firstName} ${submission.lastName}`,
-        text: createTextMessage(submission),
-        html: createHtmlMessage(submission)
-      });
+      const message = new EmailMessage(SENDER, RECIPIENT, createRawEmail(submission));
+      await env.EMAIL.send(message);
 
       return jsonResponse({ success: true }, 200, origin);
     } catch (error) {
@@ -125,6 +123,34 @@ function createHtmlMessage(submission) {
     <h3>Message</h3>
     <p>${escapeHtml(submission.message).replace(/\n/g, "<br>")}</p>
   `;
+}
+
+function createRawEmail(submission) {
+  const boundary = `contact-${crypto.randomUUID()}`;
+  const subject = "New portfolio inquiry";
+
+  return [
+    `From: Portfolio contact form <${SENDER}>`,
+    `To: ${RECIPIENT}`,
+    `Reply-To: ${submission.email}`,
+    `Subject: ${subject}`,
+    "MIME-Version: 1.0",
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    "",
+    `--${boundary}`,
+    "Content-Type: text/plain; charset=UTF-8",
+    "Content-Transfer-Encoding: 8bit",
+    "",
+    createTextMessage(submission),
+    "",
+    `--${boundary}`,
+    "Content-Type: text/html; charset=UTF-8",
+    "Content-Transfer-Encoding: 8bit",
+    "",
+    createHtmlMessage(submission),
+    "",
+    `--${boundary}--`
+  ].join("\r\n");
 }
 
 function clean(value, maxLength) {
