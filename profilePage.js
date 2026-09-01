@@ -120,6 +120,7 @@ function applyLanguage(language) {
   setText(".cv-download-btn", ["cv.download"]);
   document.getElementById("cvModalClose").setAttribute("aria-label", translate("cv.close"));
   document.querySelector(".cv-modal-header h3").textContent = translate("cv.title");
+  document.dispatchEvent(new CustomEvent("portfolio-language-changed"));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -278,6 +279,59 @@ document.addEventListener("DOMContentLoaded", function () {
       if (event.key === "Escape" && cvModalOverlay.classList.contains("visible")) {
         closeCvModal();
       }
+    });
+  }
+
+  // Article Modal
+  const articleModalOverlay = document.getElementById("articleModalOverlay");
+  const articleModalClose = document.getElementById("articleModalClose");
+  const articleModalMeta = document.getElementById("articleModalMeta");
+  const articleModalTitle = document.getElementById("articleModalTitle");
+  const articleModalBody = document.getElementById("articleModalBody");
+  let articleTrigger = null;
+
+  function renderArticle(articleId) {
+    const translations = window.portfolioTranslations?.[document.documentElement.lang];
+    if (!translations) return;
+
+    articleModalOverlay.dataset.activeArticle = articleId;
+    articleModalMeta.textContent = translations[`${articleId}.meta`] || "";
+    articleModalTitle.textContent = translations[`${articleId}.title`] || "";
+    articleModalBody.innerHTML = translations[`${articleId}.body`] || "";
+  }
+
+  function openArticleModal(button) {
+    articleTrigger = button;
+    renderArticle(button.dataset.article);
+    articleModalOverlay.hidden = false;
+    articleModalOverlay.classList.add("visible");
+    document.body.style.overflow = "hidden";
+    articleModalClose.focus();
+  }
+
+  function closeArticleModal() {
+    articleModalOverlay.classList.remove("visible");
+    articleModalOverlay.hidden = true;
+    document.body.style.overflow = "";
+    articleTrigger?.focus();
+  }
+
+  if (articleModalOverlay && articleModalClose) {
+    document.querySelectorAll(".article-open-btn").forEach((button) => {
+      button.addEventListener("click", () => openArticleModal(button));
+    });
+    articleModalClose.addEventListener("click", closeArticleModal);
+    articleModalOverlay.addEventListener("click", function (event) {
+      if (event.target === articleModalOverlay) closeArticleModal();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && articleModalOverlay.classList.contains("visible")) {
+        closeArticleModal();
+      }
+    });
+    document.addEventListener("portfolio-language-changed", function () {
+      const articleId = articleModalOverlay.dataset.activeArticle;
+      if (articleId) renderArticle(articleId);
     });
   }
 

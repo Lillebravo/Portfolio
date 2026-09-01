@@ -342,9 +342,9 @@
         <h2><span data-i18n="articles.heading">Insikter från</span> <span class="applyCyanColor" data-i18n="articles.accent">bygget.</span></h2>
       </div>
       <div class="articles-grid">
-        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article1.meta">WEBBPRESTANDA</p><h3 data-i18n="article1.title">Varför en snabb webbplats är en bättre säljare</h3><p data-i18n="article1.copy">Prestanda, tydlighet och mobilupplevelse är en del av varje digital affär, inte en eftertanke.</p><span class="article-status" data-i18n="article.status">Artikel kommer snart</span></article>
-        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article2.meta">AUTOMATISERING</p><h3 data-i18n="article2.title">När Excel blir en flaskhals</h3><p data-i18n="article2.copy">Tecken på att ett manuellt arbetsflöde är redo att bli ett skräddarsytt digitalt verktyg.</p><span class="article-status" data-i18n="article.status">Artikel kommer snart</span></article>
-        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article3.meta">TEKNIK &amp; AFFÄR</p><h3 data-i18n="article3.title">Från krav till hållbar webblösning</h3><p data-i18n="article3.copy">Hur tekniska beslut kan kopplas till tydliga mål: mindre administration, bättre data och nöjdare kunder.</p><span class="article-status" data-i18n="article.status">Artikel kommer snart</span></article>
+        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article1.meta">WEBBPRESTANDA</p><h3 data-i18n="article1.title">Varför en snabb webbplats är en bättre säljare</h3><p data-i18n="article1.copy">Prestanda, tydlighet och mobilupplevelse är en del av varje digital affär, inte en eftertanke.</p><button class="article-open-btn" type="button" data-article="article1" data-i18n="article.read">Läs artikeln</button></article>
+        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article2.meta">AUTOMATISERING</p><h3 data-i18n="article2.title">När Excel blir en flaskhals</h3><p data-i18n="article2.copy">Tecken på att ett manuellt arbetsflöde är redo att bli ett skräddarsytt digitalt verktyg.</p><button class="article-open-btn" type="button" data-article="article2" data-i18n="article.read">Läs artikeln</button></article>
+        <article class="article-card" data-skill-animate><p class="article-meta" data-i18n="article3.meta">TEKNIK &amp; AFFÄR</p><h3 data-i18n="article3.title">Från krav till hållbar webblösning</h3><p data-i18n="article3.copy">Hur tekniska beslut kan kopplas till tydliga mål: mindre administration, bättre data och nöjdare kunder.</p><button class="article-open-btn" type="button" data-article="article3" data-i18n="article.read">Läs artikeln</button></article>
       </div>
     </section>
 
@@ -526,6 +526,19 @@
           <iframe src="CV_Jerry_Lundahl.pdf" title="Jerry Lundahl CV"></iframe>
         </div>
       </div>
+    </div>
+
+    <div class="article-modal-overlay" id="articleModalOverlay" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle" hidden>
+      <article class="article-modal">
+        <div class="article-modal-header">
+          <div>
+            <p class="article-meta" id="articleModalMeta"></p>
+            <h3 id="articleModalTitle"></h3>
+          </div>
+          <button type="button" class="article-modal-close" id="articleModalClose" aria-label="Stäng" data-i18n-attr="aria-label:article.close">&times;</button>
+        </div>
+        <div class="article-modal-body" id="articleModalBody"></div>
+      </article>
     </div>
 
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
