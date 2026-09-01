@@ -354,18 +354,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const contactForm = document.querySelector(".contact-form");
-  const humanCheck = document.getElementById("humanCheck");
 
-  if (contactForm && humanCheck) {
+  if (contactForm) {
     contactForm.addEventListener("invalid", function (event) {
       const field = event.target;
       if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return;
 
       let message = contactForm.dataset.validationRequired;
-      if (field === humanCheck) {
-        message = contactForm.dataset.validationHuman;
-        field.closest(".human-check")?.classList.add("is-invalid");
-      } else if (field.type === "email" && !field.validity.valueMissing) {
+      if (field.type === "email" && !field.validity.valueMissing) {
         message = contactForm.dataset.validationEmail;
       }
 
@@ -379,9 +375,45 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    humanCheck.addEventListener("change", function () {
-      humanCheck.setCustomValidity("");
-      humanCheck.closest(".human-check")?.classList.toggle("is-invalid", !humanCheck.checked);
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const statusMessage = contactForm.querySelector(".form-status");
+      const formData = new FormData(contactForm);
+      const isSwedish = document.documentElement.lang === "sv";
+      const defaultButtonText = submitButton.textContent;
+
+      submitButton.disabled = true;
+      submitButton.textContent = isSwedish ? "Skickar..." : "Sending...";
+      statusMessage.textContent = "";
+      statusMessage.className = "form-status";
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(formData.entries()))
+        });
+
+        if (!response.ok) throw new Error("Contact request failed.");
+
+        contactForm.reset();
+        statusMessage.textContent = isSwedish
+          ? "Tack! Din förfrågan har skickats."
+          : "Thank you! Your inquiry has been sent.";
+        statusMessage.classList.add("is-success");
+      } catch (error) {
+        console.error("Could not send contact form.", error);
+        statusMessage.textContent = isSwedish
+          ? "Det gick inte att skicka just nu. Försök igen eller mejla mig direkt."
+          : "The message could not be sent. Please try again or email me directly.";
+        statusMessage.classList.add("is-error");
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = defaultButtonText;
+        if (window.turnstile) window.turnstile.reset();
+      }
     });
   }
 });

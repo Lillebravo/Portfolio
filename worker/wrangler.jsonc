@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-contact-form",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "jerrylundahl.com/api/contact",
+      "zone_name": "jerrylundahl.com"
+    },
+    {
+      "pattern": "www.jerrylundahl.com/api/contact",
+      "zone_name": "jerrylundahl.com"
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://jerrylundahl.com,https://www.jerrylundahl.com",
+    "EXPECTED_HOSTNAMES": "jerrylundahl.com,www.jerrylundahl.com"
+  },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_destination_addresses": ["jerry.lundahl@hotmail.com"],
+      "allowed_sender_addresses": ["portfolio@jerrylundahl.com"]
+    }
+  ]
+}

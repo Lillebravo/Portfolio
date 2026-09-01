@@ -1807,47 +1807,38 @@ body:not(.light-mode) .footer-github-icon {
   line-height: 1.4;
 }
 
-.human-check {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
+.website-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.cf-turnstile {
   position: relative;
   z-index: 1;
-  padding: 12px;
-  border: 1px solid var(--border-light);
-  border-radius: 8px;
-  color: var(--text-secondary);
-  font-size: 0.72em;
-  font-weight: 600;
-}
-
-.human-check input {
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  accent-color: var(--accent-color);
-}
-
-.human-check label {
-  cursor: pointer;
-}
-
-.human-check-error {
-  display: none;
   width: 100%;
-  color: #b83d3d;
-  font-size: 0.9em;
+  min-height: 65px;
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin: -8px 0 0;
+  position: relative;
+  z-index: 1;
+  color: var(--text-secondary);
+  font-size: 0.7em;
   font-weight: 700;
+  text-align: center;
 }
 
-.human-check.is-invalid {
-  border-color: #d85b5b;
-  background: rgba(216, 91, 91, 0.1);
+.form-status.is-success {
+  color: #2f9e63;
 }
 
-.human-check.is-invalid .human-check-error {
-  display: block;
+.form-status.is-error {
+  color: #d85b5b;
 }
 
 .contact-form select {
@@ -1891,6 +1882,12 @@ body:not(.light-mode) .footer-github-icon {
   background: linear-gradient(135deg, var(--accent-dark), var(--accent-color));
   transform: translateY(-4px);
   box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+  transform: none;
 }
 
 .contact-details {

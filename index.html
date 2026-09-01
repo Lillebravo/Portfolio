@@ -418,8 +418,12 @@
         </div>
 
         <div class="contact-content">
-          <form class="contact-form" data-i18n-attr="data-validation-required:contact.validation.required, data-validation-email:contact.validation.email, data-validation-human:contact.validation.human">
+          <form class="contact-form" data-i18n-attr="data-validation-required:contact.validation.required, data-validation-email:contact.validation.email">
             <h3>Projektdetaljer</h3>
+            <div class="website-field" aria-hidden="true">
+              <label for="companyWebsite">Webbplats</label>
+              <input type="text" id="companyWebsite" name="companyWebsite" tabindex="-1" autocomplete="off" />
+            </div>
             <div class="form-row">
               <div class="form-field">
                 <label for="firstName">Förnamn <span aria-hidden="true">*</span></label>
@@ -463,12 +467,9 @@
               <label for="message">Berätta om projektet <span aria-hidden="true">*</span></label>
               <textarea id="message" name="message" placeholder="Vad vill du bygga och hur ser ett lyckat resultat ut?" required></textarea>
             </div>
-            <div class="human-check">
-              <input type="checkbox" id="humanCheck" name="humanCheck" required />
-              <label for="humanCheck" data-i18n="contact.human">I am human</label>
-              <span class="human-check-error" role="alert" data-i18n="contact.validation.human">Confirm that you are human before sending.</span>
-            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAEjbsduvXZsiONsP" data-action="contact" data-size="flexible" data-theme="auto"></div>
             <button type="submit">Skicka förfrågan <span aria-hidden="true">&#8594;</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
 
           <aside class="contact-details" aria-label="Contact information">
@@ -527,6 +528,7 @@
       </div>
     </div>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="profilePage.js"></script>
   </body>
 </html>
