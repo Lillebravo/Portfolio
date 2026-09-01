@@ -88,7 +88,7 @@ const elements = {};
 
 async function loadTranslations(language) {
   if (state.translations[language]) return;
-  const response = await fetch(`lang/${language}.json`);
+  const response = await fetch(`../lang/${language}.json`);
   if (!response.ok) throw new Error(`Could not load ${language} translations.`);
   state.translations[language] = await response.json();
 }
