@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Mörk gradientbakgrund -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Accentfärger för text & glöd -->
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#1d74b7" />
+    </linearGradient>
+
+    <!-- Subtilt rutnät -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+
+    <!-- Hexagon-definition för nätverket -->
+    <polygon id="hexDark" points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="#58595b" />
+    <circle id="nodeBlue" r="9" fill="#1d74b7" stroke="#0f172a" stroke-width="2" />
+  </defs>
+
+  <!-- Bakgrund & Grid -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <!-- Ljusglöd bakom elementen -->
+  <circle cx="1020" cy="300" r="280" fill="#1d74b7" opacity="0.15" />
+  <circle cx="200" cy="100" r="180" fill="#00f2fe" opacity="0.05" />
+
+  <!-- ================= VÄNSTER SIDA: TEXT & POSITIONERING ================= -->
+
+  <!-- Företagsnamn med cyan accenter -->
+  <text x="90" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="3">
+    SCALEWEB <tspan fill="#00f2fe">SOLUTIONS</tspan>
+  </text>
+
+  <!-- Huvudtitel: Ditt namn -->
+  <text x="90" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-1">
+    Jerry Lundahl
+  </text>
+
+  <!-- Underrubrik / Expertis -->
+  <text x="90" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="600" fill="url(#cyanAccent)">
+    Fullstackutvecklare &amp; Konsult
+  </text>
+
+  <!-- Värdelöfte -->
+  <text x="90" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="400" fill="#94a3b8">
+    Moderna webbsystem, mobilappar i Flutter, SaaS &amp; SEO.
+  </text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(90, 440)">
+    <!-- .NET / C# -->
+    <rect x="0" y="0" width="120" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <text x="60" y="24" font-family="monospace" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">.NET / C#</text>
+
+    <!-- Angular -->
+    <rect x="132" y="0" width="105" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <text x="184" y="24" font-family="monospace" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Angular</text>
+
+    <!-- Flutter -->
+    <rect x="249" y="0" width="100" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <text x="299" y="24" font-family="monospace" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Flutter</text>
+
+    <!-- Azure -->
+    <rect x="361" y="0" width="95" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <text x="408" y="24" font-family="monospace" font-size="14" font-weight="600" fill="#f8fafc" text-anchor="middle">Azure</text>
+
+    <!-- SEO -->
+    <rect x="468" y="0" width="90" height="38" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+    <text x="513" y="24" font-family="monospace" font-size="14" font-weight="600" fill="#00f2fe" text-anchor="middle">SEO</text>
+  </g>
+
+  <!-- URL längst ner -->
+  <text x="90" y="555" font-family="monospace" font-size="18" font-weight="500" fill="#64748b">
+    https://jerrylundahl.com
+  </text>
+
+  <!-- ================= HÖGER SIDA: SCALEWEB SOLUTIONS LOGOTYP ================= -->
+  <g transform="translate(980, 310) scale(1.15)">
+    <!-- Atom-bana 1: Grå/Silver (vinklad vänster) -->
+    <ellipse cx="0" cy="0" rx="145" ry="50" fill="none" stroke="#7f8c8d" stroke-width="9" transform="rotate(-58)" stroke-linecap="round" stroke-dasharray="800" />
+
+    <!-- Atom-bana 2: Blå (vinklad höger) -->
+    <ellipse cx="0" cy="0" rx="145" ry="50" fill="none" stroke="#1d74b7" stroke-width="9" transform="rotate(58)" stroke-linecap="round" />
+
+    <!-- Centrala nätverkslinjer (Datakopplingar) -->
+    <g stroke="#1d74b7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="0" y1="-95" x2="35" y2="-55" />
+      <line x1="0" y1="-95" x2="-35" y2="-55" />
+      <line x1="-35" y1="-55" x2="-55" y2="-15" />
+      <line x1="35" y1="-55" x2="0" y2="-15" />
+      <line x1="-55" y1="-15" x2="0" y2="-15" />
+      <line x1="0" y1="-15" x2="-25" y2="40" />
+      <line x1="0" y1="-15" x2="35" y2="35" />
+      <line x1="-25" y1="40" x2="0" y2="95" />
+      <line x1="35" y1="35" x2="0" y2="95" />
+      <line x1="35" y1="-55" x2="60" y2="0" />
+      <line x1="60" y1="0" x2="35" y2="35" />
+      <line x1="-25" y1="40" x2="-60" y2="55" />
+    </g>
+
+    <!-- Noder (Blå cirklar) -->
+    <use href="#nodeBlue" x="35" y="-55" />
+    <use href="#nodeBlue" x="-35" y="-55" />
+    <use href="#nodeBlue" x="0" y="-15" />
+    <use href="#nodeBlue" x="-25" y="40" />
+    <use href="#nodeBlue" x="35" y="35" />
+
+    <!-- Hexagoner (Mörkgrå nätverkspunkter) -->
+    <use href="#hexDark" x="0" y="-95" />
+    <use href="#hexDark" x="-55" y="-15" />
+    <use href="#hexDark" x="45" y="15" />
+    <use href="#hexDark" x="0" y="95" />
+
+    <!-- Svepande vågor (Dynamiska linjer) -->
+    <!-- Blå svepande kurva nedtill -->
+    <path d="M -150,150 C -90,60 -75,-10 -65,25 C -55,60 -45,100 -30,120" fill="#1d74b7" />
+    
+    <!-- Grå svepande linje genom mitten -->
+    <path d="M -180,60 C -90,20 60,-20 180,20" fill="none" stroke="#7f8c8d" stroke-width="8" stroke-linecap="round" />
+  </g>
+</svg>

@@ -910,6 +910,7 @@ h2 {
   color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95em;
+  overflow-wrap: anywhere;
 }
 
 .services-cta {
@@ -1150,6 +1151,33 @@ h2 {
   color: var(--accent-dark);
 }
 
+.project-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  color: var(--accent-color);
+  font-size: 0.57em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.project-stack {
+  margin: 14px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.68em;
+  line-height: 1.5;
+}
+
 .project-content p {
   color: var(--text-secondary);
   line-height: 1.55;
@@ -1381,6 +1409,49 @@ h2 {
   overflow: hidden;
 }
 
+.project-wireframe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+}
+
+.project-wireframe span {
+  display: block;
+  border: 1px solid var(--border-hover);
+  background: var(--transparent-bg);
+}
+
+.project-wireframe .wireframe-top,
+.project-wireframe .wireframe-title {
+  grid-column: 1 / -1;
+}
+
+.project-wireframe .wireframe-top {
+  height: 10px;
+}
+
+.project-wireframe .wireframe-title {
+  width: 64%;
+  height: 22px;
+  border-color: var(--accent-color);
+}
+
+.project-wireframe .wireframe-card {
+  height: 80px;
+}
+
+.invoice-wireframe .wireframe-card:last-child {
+  border-color: var(--accent-color);
+}
+
+.omniguard-wireframe .wireframe-card:first-of-type {
+  grid-column: 1 / -1;
+  height: 54px;
+}
+
 /* Expandable cards (education & project cases) on smaller screens */
 .card-expand-toggle {
   display: none;
@@ -1503,6 +1574,10 @@ h2 {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
+}
+
+body:not(.light-mode) .footer-github-icon {
+  stroke: #ffffff;
 }
 
 .site-footer .contact-icons {
@@ -1945,10 +2020,67 @@ a.contact-method:hover {
 /* Menu Toggle (Mobile) */
 .menu-toggle {
   display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--text-primary);
   font-size: 1.8em;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
+  position: relative;
+}
+
+.menu-toggle-glyph,
+.menu-toggle-cross,
+.menu-toggle-cross::before,
+.menu-toggle-cross::after {
+  position: absolute;
+  inset: 0;
+}
+
+.menu-toggle-glyph {
+  line-height: 32px;
+  transition: opacity 0.18s ease, transform 0.25s ease;
+}
+
+.menu-toggle-cross {
+  opacity: 0;
+  transform: scale(0.7) rotate(-45deg);
+  transition: opacity 0.18s ease, transform 0.25s ease;
+}
+
+.menu-toggle-cross::before,
+.menu-toggle-cross::after {
+  content: "";
+  width: 26px;
+  height: 3px;
+  margin: auto;
+  border-radius: 2px;
+  background-color: currentColor;
+}
+
+.menu-toggle-cross::before {
+  transform: rotate(45deg);
+}
+
+.menu-toggle-cross::after {
+  transform: rotate(-45deg);
+}
+
+.menu-toggle[aria-expanded="true"] {
+  color: var(--accent-color);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-glyph {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.7);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-cross {
+  opacity: 1;
+  transform: scale(1) rotate(0);
 }
 
 .menu-toggle:hover {
@@ -1960,15 +2092,20 @@ a.contact-method:hover {
   .navbar {
     padding: 15px;
     height: auto;
+    min-height: 70px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
   .navbar nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     right: 0;
+    transform: translateX(0);
     background: var(--bg-secondary);
     gap: 5px;
     padding: 15px;
@@ -1993,12 +2130,26 @@ a.contact-method:hover {
 
   .menu-toggle {
     display: flex;
-    order: -1;
+    order: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-controls {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .navbar > a:first-of-type {
+    display: flex;
+    order: 3;
   }
 
   .logo {
     height: 6vh;
-    flex: 1;
+    min-height: 38px;
+    max-height: 48px;
   }
 
   .theme-toggle {
