@@ -1327,8 +1327,47 @@ h2 {
 }
 
 .articles-blog-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: fit-content;
   margin: 34px auto 0;
+  padding: 6px 2px;
+  border-bottom: 1px solid var(--border-hover);
+  color: var(--text-primary);
+  font-family: "K2D";
+  font-size: 0.78em;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.articles-blog-link:hover,
+.articles-blog-link:focus-visible {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.articles-blog-link-icon {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 1.25em;
+  line-height: 1;
+  animation: blogLinkHint 1.8s ease-in-out infinite;
+}
+
+@keyframes blogLinkHint {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4px, -4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articles-blog-link-icon {
+    animation: none;
+  }
 }
 
 .project-actions {
