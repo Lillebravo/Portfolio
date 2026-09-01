@@ -1331,6 +1331,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  box-sizing: border-box;
   width: fit-content;
   margin: 34px auto 0;
   padding: 6px 2px;
@@ -1356,17 +1357,41 @@ h2 {
   color: var(--accent-color);
   font-size: 1.25em;
   line-height: 1;
+  will-change: transform;
   animation: blogLinkHint 1.8s ease-in-out infinite;
 }
 
 @keyframes blogLinkHint {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(4px, -4px); }
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(4px, -4px, 0); }
+}
+
+@keyframes blogLinkPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .articles-blog-link-icon {
-    animation: none;
+    animation: blogLinkPulse 1.8s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .articles-blog-link {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    border-bottom: 0;
+  }
+
+  .articles-blog-link > span:first-child {
+    border-bottom: 1px solid var(--border-hover);
+  }
+
+  .articles-blog-link:hover > span:first-child,
+  .articles-blog-link:focus-visible > span:first-child {
+    border-color: var(--accent-color);
   }
 }
 
