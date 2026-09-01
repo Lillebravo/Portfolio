@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Artiklar av Jerry Lundahl om webbutveckling, automatisering och digital affärsutveckling." />
+    <title>Anteckningar från bygget | Jerry Lundahl</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+    <header class="blog-header">
+      <a class="blog-brand" href="blog.html" aria-label="Bloggens startsida">
+        <img src="Images/logo.png" alt="" />
+        <span><strong>Jerry Lundahl</strong><small data-ui="brandSubtitle">Anteckningar från bygget</small></span>
+      </a>
+      <nav aria-label="Huvudnavigering">
+        <a href="index.html" data-ui="portfolioLink">Portfolio</a>
+        <a href="blog.html" data-ui="articlesLink">Artiklar</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Växla färgtema" title="Växla färgtema"></button>
+        <button class="language-button" id="languageToggle" type="button" aria-label="Byt språk">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="blog-intro" id="blogHome">
+        <div class="intro-copy">
+          <p class="eyebrow" data-ui="eyebrow">UTVECKLING · AUTOMATISERING · DIGITAL AFFÄR</p>
+          <h1 data-ui="heading">Praktiska tankar om teknik som ska fungera i verkligheten.</h1>
+          <p data-ui="intro">Här skriver jag om besluten bakom snabba webbplatser, smartare arbetsflöden och lösningar som är möjliga att förvalta även efter lanseringen.</p>
+        </div>
+        <aside class="author-note">
+          <img src="Images/profile_picture.png" alt="Jerry Lundahl" />
+          <div>
+            <span data-ui="writtenBy">Skrivet av</span>
+            <strong>Jerry Lundahl</strong>
+            <small data-ui="authorRole">Fullstackutvecklare och grundare av ScaleWeb Solutions</small>
+          </div>
+        </aside>
+      </section>
+
+      <section class="blog-index" id="blogIndex" aria-labelledby="latestHeading">
+        <div class="index-toolbar">
+          <div>
+            <p class="eyebrow" data-ui="collection">SAMLINGEN</p>
+            <h2 id="latestHeading" data-ui="latest">Senaste artiklarna</h2>
+          </div>
+          <div class="filter-group" id="categoryFilters" aria-label="Filtrera artiklar"></div>
+        </div>
+        <div class="post-grid" id="postGrid"></div>
+        <p class="empty-state" id="emptyState" hidden data-ui="empty">Inga artiklar matchar filtret.</p>
+      </section>
+
+      <article class="reading-view" id="readingView" hidden aria-labelledby="readingTitle">
+        <button class="back-button" id="backToBlog" type="button"><span aria-hidden="true">←</span> <span data-ui="back">Alla artiklar</span></button>
+        <header class="reading-header">
+          <p class="eyebrow" id="readingCategory"></p>
+          <h1 id="readingTitle"></h1>
+          <p class="reading-deck" id="readingDeck"></p>
+          <div class="byline">
+            <img src="Images/profile_picture.png" alt="Jerry Lundahl" />
+            <div><strong>Jerry Lundahl</strong><span id="readingMeta"></span></div>
+          </div>
+        </header>
+        <div class="article-layout">
+          <div class="article-copy" id="articleCopy"></div>
+          <aside class="article-aside">
+            <p data-ui="shareLabel">Dela artikeln</p>
+            <button type="button" id="copyLinkButton" data-ui="copyLink">Kopiera länk</button>
+            <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+          </aside>
+        </div>
+
+        <section class="comments" aria-labelledby="commentsHeading">
+          <div class="comments-heading">
+            <div>
+              <p class="eyebrow" data-ui="discussion">DISKUSSION</p>
+              <h2 id="commentsHeading"><span data-ui="comments">Kommentarer</span> <span id="commentCount">0</span></h2>
+            </div>
+            <p data-ui="localNotice">Kommentarer sparas endast i den här webbläsaren.</p>
+          </div>
+          <form class="comment-form" id="commentForm">
+            <div class="field-row">
+              <label><span data-ui="nameLabel">Namn</span><input id="commentName" name="name" type="text" maxlength="60" autocomplete="name" required /></label>
+              <label><span data-ui="emailLabel">E-post (visas inte)</span><input id="commentEmail" name="email" type="email" maxlength="120" autocomplete="email" required /></label>
+            </div>
+            <label><span data-ui="commentLabel">Kommentar</span><textarea id="commentText" name="comment" rows="5" maxlength="1000" required></textarea></label>
+            <div class="comment-form-footer">
+              <small><span id="commentCharacters">0</span>/1000</small>
+              <button type="submit" data-ui="publish">Publicera kommentar</button>
+            </div>
+            <p class="form-status" id="commentStatus" role="status" aria-live="polite"></p>
+          </form>
+          <div class="comment-list" id="commentList"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="blog-footer">
+      <div><strong>Jerry Lundahl</strong><span data-ui="footerText">Teknik, affär och det praktiska arbetet däremellan.</span></div>
+      <a href="mailto:contact@jerrylundahl.com">contact@jerrylundahl.com</a>
+      <p>&copy; 2026 ScaleWeb Solutions</p>
+    </footer>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
