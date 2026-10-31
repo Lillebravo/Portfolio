@@ -293,10 +293,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 200px 0 50px;
+  padding: 120px 200px 100px 50px;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   color: var(--text-primary);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -318,7 +319,7 @@ h2 {
   flex: 1;
   max-width: 50%;
   position: relative;
-  top: -25vh;
+  top: 0;
   z-index: 1;
   animation: fadeInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -406,7 +407,7 @@ h2 {
   flex: 1;
   text-align: right;
   position: relative;
-  top: -20vh;
+  top: 0;
   z-index: 1;
   animation: fadeInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -520,6 +521,7 @@ h2 {
 
 .about-text {
   flex: 1;
+  min-width: 0;
   animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -544,6 +546,7 @@ h2 {
   margin-bottom: 30px;
   line-height: 1.8;
   color: var(--text-secondary);
+  overflow-wrap: anywhere;
 }
 
 .about .btn-primary {
@@ -2313,6 +2316,15 @@ a.contact-method:hover {
     gap: 30px;
   }
 
+  .specialties ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .specialties li {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .about h1 {
     font-size: 2em;
   }
@@ -2511,9 +2523,10 @@ a.contact-method:hover {
 
   .contact-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     width: 100%;
+    min-width: 0;
   }
 
   .contact-header {
@@ -2550,6 +2563,12 @@ a.contact-method:hover {
   .contact-form {
     width: 100%;
     box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .form-row,
+  .form-field {
+    min-width: 0;
   }
 
   .contact-details {
@@ -2739,6 +2758,13 @@ a.contact-method:hover {
 
   .site-footer p {
     margin: 4px 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .cf-turnstile {
+    transform: scale(0.72);
+    transform-origin: left top;
   }
 }
 
